@@ -9,10 +9,10 @@
 
 
 Из открытых источников взяты данные по наименованиям станций:
-B02512 - Unter
-B02598 - Hinter
-B02617 - Weiter
-B02682 - Schmecken
+B02512 - Unter;
+B02598 - Hinter;
+B02617 - Weiter;
+B02682 - Schmecken;
 B02764 - Danach-NY
 
 
