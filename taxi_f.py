@@ -17,15 +17,13 @@ uber_df['Day_of_week'] = uber_df['Date/Time'].dt.weekday
 # Делаем визуализацию распределения вызовов в зависимости от дня в месяце
 #создаю фигуру, на которой будет располагаться гистограмма
 fig = plt.figure(figsize=[12, 6])
+ax = fig.add_subplot()
 
-# строим гистограмму распределения по дням
-# hist самостоятельно подсчитывает кол-во по каждому дню
-plt.hist(uber_df['Day'], width= 0.6, bins= 30)
-plt.title('Распределение вызовов такси по датам месяца', fontsize=16)
-plt.xlabel('День', fontsize=14)
-plt.ylabel('Количество вызовов', fontsize=14)
+ax.hist(uber_df['Day'], bins= 30, color= "orange", edgecolor='black')
+ax.set_title('Распределение вызовов такси по датам месяца', fontsize=16)
+ax.set_xlabel('День', fontsize=14)
+ax.set_xticks([i for i in range(0,31)])
+ax.set_ylabel('Количество вызовов', fontsize=14)
+plt.savefig('images/Day.png', dpi=120)
+plt.show()
 
-# сохраняем картинку
-plt.savefig('Day.png', dpi=120)
-
-#print(uber_df.head(5))
